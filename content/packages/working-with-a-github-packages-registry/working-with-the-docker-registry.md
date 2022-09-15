@@ -45,7 +45,6 @@ When installing or publishing a Docker image, the Docker registry does not curre
 ### Authenticating with a personal access token
 
 {% data reusables.package_registry.required-scopes %}
-
 You can authenticate to {% data variables.product.prodname_registry %} with Docker using the `docker` login command.
 
 To keep your credentials secure, we recommend you save your personal access token in a local file on your computer and use Docker's `--password-stdin` flag, which reads your token from a local file.
@@ -114,7 +113,8 @@ For more information, see "[Docker login](https://docs.docker.com/engine/referen
   If your instance has subdomain isolation enabled:
   {% endif %}
   ```shell
-  $ docker tag <em>IMAGE_ID</em> docker.<em>HOSTNAME/OWNER/REPOSITORY/IMAGE_NAME:VERSION</em>
+  $ docker tag <em>IMAGE_ID</em> docker.
+  <em>HOSTNAME/OWNER/REPOSITORY/IMAGE_NAME:VERSION</em>
   ```
   {% ifversion ghes %}
   If your instance has subdomain isolation disabled:
